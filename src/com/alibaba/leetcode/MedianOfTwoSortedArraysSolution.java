@@ -20,15 +20,15 @@ package com.alibaba.leetcode;
  * @author wang
  * @date 2019/06/27
  */
-public class MedianOfTwoSortedArrays {
+public class MedianOfTwoSortedArraysSolution {
 
     public static void main(String[] args) {
 
         int[] nums1 = {1, 3};
         int[] nums2 = {2};
-        System.out.println(new MedianOfTwoSortedArrays().findMedianSortedArrays(nums1, nums2));
-        System.out.println(new MedianOfTwoSortedArrays().findMedianSortedArrays(new int[] {}, new int[] {1, 2, 3}));
-        System.out.println(new MedianOfTwoSortedArrays().findMedianSortedArrays(new int[] {1, 2}, new int[] {3, 4}));
+        System.out.println(new MedianOfTwoSortedArraysSolution().findMedianSortedArrays(nums1, nums2));
+        System.out.println(new MedianOfTwoSortedArraysSolution().findMedianSortedArrays(new int[] {}, new int[] {1, 2, 3}));
+        System.out.println(new MedianOfTwoSortedArraysSolution().findMedianSortedArrays(new int[] {1, 2}, new int[] {3, 4}));
     }
 
     /**
