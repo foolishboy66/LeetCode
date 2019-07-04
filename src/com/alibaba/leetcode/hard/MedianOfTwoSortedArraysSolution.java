@@ -1,4 +1,4 @@
-package com.alibaba.leetcode;
+package com.alibaba.leetcode.hard;
 
 /**
  * There are two sorted arrays nums1 and nums2 of size m and n respectively.

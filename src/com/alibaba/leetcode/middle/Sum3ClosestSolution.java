@@ -1,4 +1,4 @@
-package com.alibaba.leetcode;
+package com.alibaba.leetcode.middle;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.alibaba.leetcode;
+package com.alibaba.leetcode.hard;
 
 public class PatternMatchSolution {
 

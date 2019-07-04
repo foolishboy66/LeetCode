@@ -1,4 +1,4 @@
-package com.alibaba.utils;
+package com.alibaba.leetcode.utils;
 
 import com.alibaba.leetcode.struct.ListNode;
 
@@ -33,6 +33,19 @@ public class ConvertUtils {
 
         sb.append(")");
         return sb.toString();
+    }
+
+    public static ListNode buildListNode(int... nums) {
+
+        ListNode node = new ListNode(nums[0]);
+
+        ListNode n = node;
+        for (int i = 1; i < nums.length; i++) {
+            n.next = new ListNode(nums[i]);
+            n = n.next;
+        }
+
+        return node;
     }
 
 }

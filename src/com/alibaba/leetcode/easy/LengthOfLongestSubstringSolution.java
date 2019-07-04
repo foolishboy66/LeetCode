@@ -1,4 +1,4 @@
-package com.alibaba.leetcode;
+package com.alibaba.leetcode.easy;
 
 import java.util.HashMap;
 import java.util.Map;

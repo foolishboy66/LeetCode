@@ -1,4 +1,4 @@
-package com.alibaba.leetcode;
+package com.alibaba.leetcode.middle;
 
 /**
  * Implement atoi which converts a string to an integer.

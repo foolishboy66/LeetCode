@@ -1,10 +1,10 @@
-package com.alibaba.leetcode;
+package com.alibaba.leetcode.middle;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.alibaba.leetcode.struct.ListNode;
-import com.alibaba.utils.ConvertUtils;
+import com.alibaba.leetcode.utils.ConvertUtils;
 
 /**
  * Given a linked list, remove the n-th node from the end of list and return its head.
