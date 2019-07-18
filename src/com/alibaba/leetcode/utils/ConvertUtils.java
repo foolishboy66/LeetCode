@@ -19,6 +19,27 @@ public class ConvertUtils {
         return sb.toString();
     }
 
+    /**
+     * [[1,2],[3,10],[12,16]]
+     * 
+     * @param arr
+     * @return
+     */
+    public static String intArrayToStr(int[][] arr) {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < arr.length; i++) {
+            sb.append(intArrayToStr(arr[i]));
+            if (i != arr.length - 1) {
+                sb.append(", ");
+            }
+        }
+
+        sb.append("]");
+        return sb.toString();
+    }
+
     public static String listNodeToStr(ListNode node) {
 
         StringBuilder sb = new StringBuilder();
