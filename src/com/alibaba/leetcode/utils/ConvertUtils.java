@@ -69,4 +69,19 @@ public class ConvertUtils {
         return node;
     }
 
+    public static String intArrayToStr(int[] arr, int len) {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < len; i++) {
+            sb.append(arr[i]);
+            if (i != len - 1) {
+                sb.append(", ");
+            }
+        }
+
+        sb.append("]");
+        return sb.toString();
+    }
+
 }
