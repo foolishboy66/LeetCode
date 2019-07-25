@@ -1,6 +1,7 @@
 package com.alibaba.leetcode.utils;
 
 import com.alibaba.leetcode.struct.ListNode;
+import com.alibaba.leetcode.struct.TreeNode;
 
 public class ConvertUtils {
 
@@ -54,6 +55,24 @@ public class ConvertUtils {
 
         sb.append(")");
         return sb.toString();
+    }
+
+    public static String treeNodeToStr(TreeNode node) {
+
+        TreeNode root = node;
+        StringBuilder sb = new StringBuilder();
+        preOrderTrrivalBinaryTree(root, sb);
+        return sb.toString();
+    }
+
+    private static void preOrderTrrivalBinaryTree(TreeNode root, StringBuilder sb) {
+        if (root == null) {
+//            sb.append("null, ");
+            return;
+        }
+        sb.append(root.val + ", ");
+        preOrderTrrivalBinaryTree(root.left, sb);
+        preOrderTrrivalBinaryTree(root.right, sb);
     }
 
     public static ListNode buildListNode(int... nums) {
