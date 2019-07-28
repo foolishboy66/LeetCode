@@ -1,5 +1,8 @@
 package com.alibaba.leetcode.utils;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.alibaba.leetcode.struct.ListNode;
 import com.alibaba.leetcode.struct.TreeNode;
 
@@ -67,7 +70,7 @@ public class ConvertUtils {
 
     private static void preOrderTrrivalBinaryTree(TreeNode root, StringBuilder sb) {
         if (root == null) {
-//            sb.append("null, ");
+            // sb.append("null, ");
             return;
         }
         sb.append(root.val + ", ");
@@ -101,6 +104,40 @@ public class ConvertUtils {
 
         sb.append("]");
         return sb.toString();
+    }
+
+    public static TreeNode buildTreeNodeFromPreorderAndInorder(int[] preorder, int[] inorder) {
+
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < inorder.length; i++) {
+            map.put(inorder[i], i);
+        }
+
+        return partition(preorder, 0, preorder.length, inorder, 0, inorder.length, map);
+    }
+
+    private static TreeNode partition(int[] preorder, int preStart, int preEnd, int[] inorder, int inStart, int inEnd,
+        Map<Integer, Integer> map) {
+
+        if (preEnd == preStart) {
+            return null;
+        }
+
+        // 构造当前的根节点
+        int rootVal = preorder[preStart];
+        TreeNode root = new TreeNode(rootVal);
+
+        // 获取当前根节点在中序遍历中的位置
+        Integer index = map.get(rootVal);
+
+        int left = index - inStart;
+
+        // 构造左子树
+        root.left = partition(preorder, preStart + 1, preStart + 1 + left, inorder, inStart, index, map);
+        // 构造右子树
+        root.right = partition(preorder, preStart + 1 + left, preEnd, inorder, index + 1, inEnd, map);
+
+        return root;
     }
 
 }
