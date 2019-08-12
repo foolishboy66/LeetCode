@@ -61,7 +61,7 @@ public class BestTimeToBuyAndSellStockIIISolution {
      * 
      * dp[i][j][0] = max(dp[i-1][j][0], dp[i-1][j][1] + prices[i])
      * 
-     * dp[i][j][1] = max(dp[i-1][j][1], dp[i-1][k+1][0] - prices[i])
+     * dp[i][j][1] = max(dp[i-1][j][1], dp[i-1][j+1][0] - prices[i])
      * 
      * @param prices
      * @return
